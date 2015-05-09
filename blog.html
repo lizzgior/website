@@ -23,6 +23,9 @@
 			#montage > video {
 				width: 100%;
 			}
+			#buses {
+				margin-top: 7%;
+			}
 			.intro {
 				color: white;
 				position: absolute;
@@ -141,7 +144,7 @@
 			}
 			@media all and (max-width: 991px) {
 				.title.video-title, .byline.video-byline {
-					color: black;
+					color: white;
 				}
 				.title {
 					margin-top: -2.5em;
@@ -268,31 +271,31 @@
 					    <div class="item active">
 					      <img src="slideshow/slide_1.jpg" alt="Slide 1">
 					      <div class="carousel-caption">
-    						<p>Dawn Broadcast Studio, Karachi</p>
+    						<p>Dawn Broadcast Studio<br>Karachi</p>
   						  </div>
 					    </div>
 					    <div class="item">
 					      <img src="slideshow/slide_2.jpg" alt="Slide 2">
 					      <div class="carousel-caption">
-    						<p>ExpressTV Bureau Office Editing Room, Lahore</p>
+    						<p>ExpressTV Bureau Office Editing Room<br>Lahore</p>
   						  </div>
 					    </div>
 					    <div class="item">
 					      <img src="slideshow/slide_3.jpg" alt="Slide 3">
 					      <div class="carousel-caption">
-    						<p>ExpressTV Bureau Office, Lahore</p>
+    						<p>ExpressTV Bureau Office<br>Lahore</p>
   						  </div>
 					    </div>
 					    <div class="item">
 					      <img src="slideshow/slide_4.jpg" alt="Slide 4">
 					      <div class="carousel-caption">
-    						<p>ExpressTV Cameraman, Lahore</p>
+    						<p>ExpressTV Cameraman<br>Lahore</p>
   						  </div>
 					    </div>
 					    <div class="item">
 					      <img src="slideshow/slide_5.jpg" alt="Slide 5">
 					      <div class="carousel-caption">
-    						<p>Haroon Abbas in ExpressTV Bureau Office, Lahore</p>
+    						<p>Haroon Abbas, ExpressTV Bureau Office<br>Lahore</p>
   						  </div>
 					    </div>
 					  </div>
@@ -312,11 +315,7 @@
 
 					<p>I worked with Haroon Abbas, a reporter with Express TV - an Urdu language television station based in Lahore. Despite the bare-bones offices, the reporters I met at Express TV were dedicated to their viewers. From the start Haroon was eager to report a story about pollution in Lahore. According to various environmental organizations, in recent years Lahore began to top lists of the most polluted cities in the world. This was causing problems for residents of Lahore, many of whom lived next door to heavy industry.</p>
 
-					<p>Haroon's eagerness often gave way to overzealousness. Lack of fluent Urdu or any Urdu language skills left me with only body language to clue me in to the often-chaotic situation. In one instance I found myself in a car with Haroon and an inspector for the local Environmental Protection Agency speeding toward a steel mill. An additional van with three more inspectors and the cameraman led the way.  I thought we had lucked out: at the exact time we visited the EPA office, officials were heading out on a raid. Shortly after arriving, when the cameraman instructed the inspectors to reenter again in hopes of capturing a different angle, I quickly realized my mistake. This charade of a raid was for us.</p>			
-
-					<p>I tried discussing with Haroon why I felt found fault in parts of our reporting process. Perhaps because I am still a student, shielded from the pressures of the highly competitive real world of news reporting, I have yet to be forced to question my values. Haroon and I were pressed for time so the inspection team acted for our convenience. This happens all the time, even in local news back home.</p>
-
-					<p>I never worried that we were in danger of misleading the viewer. We were very through in our reporting; we interviewed several government officials, a cardiologist and an environmental activist to provide our viewers with many viewpoints and ideas. As a student I am encouraged to think what journalism aspires to be, not what actually happens on the ground.</p>
+					<p>Haroon's eagerness often gave way to overzealousness. Lack of fluent Urdu or any Urdu language skills left me with only body language to clue me in to the often-chaotic situation. In one instance I found myself in a car with Haroon and an inspector for the local Environmental Protection Agency speeding toward a steel mill. An additional van with three more inspectors and the cameraman led the way.  I thought we had lucked out: at the exact time we visited the EPA office, officials were heading out on a raid. Shortly after arriving, when the cameraman instructed the inspectors to reenter again in hopes of capturing a different angle, I quickly realized my mistake. This charade of a raid was for us.</p>
 
 					<figure>
 						<div id="montage">
@@ -330,7 +329,11 @@
 								<p class="caption">The very enthusiastic beginning of my video package for ExpressTV.</p>
 							</figcaption>
 						</div>
-					</figure>
+					</figure>	
+
+					<p>I tried discussing with Haroon why I felt found fault in parts of our reporting process. Perhaps because I am still a student, shielded from the pressures of the highly competitive real world of news reporting, I have yet to be forced to question my values. Haroon and I were pressed for time so the inspection team acted for our convenience. This happens all the time, even in local news back home.</p>
+
+					<p>I never worried that we were in danger of misleading the viewer. We were very through in our reporting; we interviewed several government officials, a cardiologist and an environmental activist to provide our viewers with many viewpoints and ideas. As a student I am encouraged to think what journalism aspires to be, not what actually happens on the ground.</p>
 
 					<p>Even with the challenges of working in a foreign environment and learning how to collaborate professionally, Haroon taught me that fancy offices and high-tech equipment are not essential for reporting the news.</p>
 
@@ -365,7 +368,6 @@
 								offset += 120;
 							}
 						}
-						console.log(video.id, offset);
 						/*if ($(window).width() < $(window).height()) {
 							$(element).css('top', 'px');
 						} else {
@@ -378,14 +380,14 @@
 			function positionSteel() {
 				$('#steel-video').css('height', $('#steel-3').height() + 'px');
 				_.each($('.story'), function(el) {
-					$(el).height($(el).height() * 1.2);
+					//$(el).height($(el).height() * 1.2);
 				});
 			}
 
 			$(document).ready(function() {
 				$('.carousel').carousel();
 				$('#footer-container').height($(window).height());
-				positionVideoTitles();
+				//positionVideoTitles();
 				positionSteel();
 			});
 			// Should include an HTML5 video shim
