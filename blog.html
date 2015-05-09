@@ -15,11 +15,13 @@
 			.full-video {
 				width: 100%;
 			}
-			#montage > video {
-				width: 55%;
+			#montage {
 				float: left;
-				margin-right: 15px;
-				margin-bottom: 5px;
+				padding-right: 15px;
+				padding-bottom: 10px;
+			}
+			#montage > video {
+				width: 100%;
 			}
 			.intro {
 				color: white;
@@ -50,17 +52,22 @@
 				font-size: 1.1em;
 			}
 			.carousel-caption {
-				bottom: 0px;
-				margin-bottom: 0px;
-				padding-bottom: 0px;
+				position: static;
+				color: black;
+				text-shadow: none;
+				padding-bottom: 10px;
+				font-style: italic;
+			}
+			.carousel-control.left, .carousel-control.right {
+				background-image: none;
 			}
 			.footer {
 				text-align: center;
 				font-variant: small-caps;
 			}
 			.caption {
-				position: absolute;
-  				bottom: -30px;
+				/*position: absolute;
+  				bottom: -30px;*/
   				font-style: italic;
   				font-size: 1.0em;
 			}
@@ -132,7 +139,7 @@
 				width: 100%;
 				background-color: black;
 			}
-			@media all and (max-width: 960px) {
+			@media all and (max-width: 991px) {
 				.title.video-title, .byline.video-byline {
 					color: black;
 				}
@@ -145,6 +152,11 @@
 				}
 				#site-bug {
 					width: 33%;
+				}
+			}
+			@media all and (max-width: 767px) {
+				.carousel {
+					width: 100%;
 				}
 			}
 		</style>
@@ -250,15 +262,6 @@
 			<div class="row-fluid" id="firstpost">
 				<div class="col-xs-12 col-md-8 col-md-offset-2">
 					<div id="newsroom-carousel" class="carousel slide" data-ride="carousel">
-					  <!-- Indicators
-					  <ol class="carousel-indicators">
-					    <li data-target="#newsroom-carousel" data-slide-to="0" class="active"></li>
-					    <li data-target="#newsroom-carousel" data-slide-to="1"></li>
-					    <li data-target="#newsroom-carousel" data-slide-to="2"></li>
-					    <li data-target="#newsroom-carousel" data-slide-to="3"></li>
-					    <li data-target="#newsroom-carousel" data-slide-to="4"></li>
-					  </ol>
-					  -->
 
 					  <!-- Wrapper for slides -->
 					  <div class="carousel-inner" role="listbox">
@@ -304,32 +307,30 @@
 					    <span class="sr-only">Next</span>
 					  </a>
 					</div>
-					
 
 					<p>Lahore &mdash; In 2002 after the Pakistani government lifted press restrictions, news channels flooded the airways. This great media expansion created a fiercely competitive environment; often quality journalism gave way to sensationalism to attract viewers. Broadcast news continues to dominate the media market in Pakistan, with three-fourths of adults watching weekly.</p>
 
 					<p>I worked with Haroon Abbas, a reporter with Express TV - an Urdu language television station based in Lahore. Despite the bare-bones offices, the reporters I met at Express TV were dedicated to their viewers. From the start Haroon was eager to report a story about pollution in Lahore. According to various environmental organizations, in recent years Lahore began to top lists of the most polluted cities in the world. This was causing problems for residents of Lahore, many of whom lived next door to heavy industry.</p>
 
-					<p>Haroon's eagerness often gave way to overzealousness. Lack of fluent Urdu or any Urdu language skills left me with only body language to clue me in to the often-chaotic situation. In one instance I found myself in a car with Haroon and an inspector for the local Environmental Protection Agency speeding toward a steel mill. An additional van with three more inspectors and the cameraman led the way.  I thought we had lucked out: at the exact time we visited the EPA office, officials were heading out on a raid. Shortly after arriving, when the cameraman instructed the inspectors to reenter again in hopes of capturing a different angle, I quickly realized my mistake. This charade of a raid was for us.</p>
-
-
-			
+					<p>Haroon's eagerness often gave way to overzealousness. Lack of fluent Urdu or any Urdu language skills left me with only body language to clue me in to the often-chaotic situation. In one instance I found myself in a car with Haroon and an inspector for the local Environmental Protection Agency speeding toward a steel mill. An additional van with three more inspectors and the cameraman led the way.  I thought we had lucked out: at the exact time we visited the EPA office, officials were heading out on a raid. Shortly after arriving, when the cameraman instructed the inspectors to reenter again in hopes of capturing a different angle, I quickly realized my mistake. This charade of a raid was for us.</p>			
 
 					<p>I tried discussing with Haroon why I felt found fault in parts of our reporting process. Perhaps because I am still a student, shielded from the pressures of the highly competitive real world of news reporting, I have yet to be forced to question my values. Haroon and I were pressed for time so the inspection team acted for our convenience. This happens all the time, even in local news back home.</p>
-						<div id="montage">
-
-					<video loop=true controls=true preload="auto">
-						<source src="montage.mp4" type="video/mp4">
-						<source src="montage.webm" type="video/webm">
-					  	I'm sorry; your browser doesn't support HTML5 video in WebM with VP8 or MP4 with H.264.
-					  	<!-- You can embed a Flash player here, to play your mp4 video in older browsers -->
-					</video>
-
-					<p class="caption">The very enthusiastic beginning of my video package for ExpressTV.</p>
-
-					</div>
 
 					<p>I never worried that we were in danger of misleading the viewer. We were very through in our reporting; we interviewed several government officials, a cardiologist and an environmental activist to provide our viewers with many viewpoints and ideas. As a student I am encouraged to think what journalism aspires to be, not what actually happens on the ground.</p>
+
+					<figure>
+						<div id="montage">
+							<video loop=true controls=true preload="auto">
+								<source src="montage.mp4" type="video/mp4">
+								<source src="montage.webm" type="video/webm">
+							  	I'm sorry; your browser doesn't support HTML5 video in WebM with VP8 or MP4 with H.264.
+							  	<!-- You can embed a Flash player here, to play your mp4 video in older browsers -->
+							</video>
+							<figcaption>
+								<p class="caption">The very enthusiastic beginning of my video package for ExpressTV.</p>
+							</figcaption>
+						</div>
+					</figure>
 
 					<p>Even with the challenges of working in a foreign environment and learning how to collaborate professionally, Haroon taught me that fancy offices and high-tech equipment are not essential for reporting the news.</p>
 
